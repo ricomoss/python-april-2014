@@ -62,9 +62,9 @@ Review From Class1
 There were a few concepts introduced in the first class that we'll review shortly before we expand.  If you took the time to do the advanced exercises you may have run into some concepts we didn't discuss.  Let's do that now.
 
 
-In exercise 9 we used the Python ``max()`` built-in function.  Python has dozens of built-in functions and you are encouraged to use them whenever you can.  Without going into too much detail let's just say the Python team has optimized these built-in functions to be very efficient (much more efficient than your code would be).  In the case of finding the max value with ``for`` or ``while`` loops you'll be magnitudes of order slower than using Python's ``max()`` built-in function.  You can find more information about Python's built-in functions on the official Python website (http://docs.python.org/3.3/library/functions.html).
+In the advanced exercise 1 we used the Python ``max()`` built-in function.  Python has dozens of built-in functions and you are encouraged to use them whenever you can.  Without going into too much detail let's just say the Python team has optimized these built-in functions to be very efficient (much more efficient than your code would be).  In the case of finding the max value with ``for`` or ``while`` loops you'll be magnitudes of order slower than using Python's ``max()`` built-in function.  You can find more information about Python's built-in functions on the official Python website (http://docs.python.org/3.3/library/functions.html).
 
-In exercise 10 we spliced the list using the following syntax.
+In the advanced exercise 2 we spliced the list using the following syntax.
 
     In[1]: my_obj[start:end]
 
@@ -74,21 +74,21 @@ Which is equivalent to the following (for lists).
     for index in range(start, end):
         new_obj.append(my_obj[index])
 
-In exercise 11 we took the above concept even further and added ``step``.
+In the advanced exercise 3 and 4 we took the above concept even further and added ``step``.
 
     In[1]: name[::-1]
 
 If ``start`` and ``end`` are left blank it will start at the beginning and finish at the end.  The ``step`` is the final value which determines how we'll "step" through the list.  In this case, with ``-1``, we're stepping backward one at a time.
 
-In exercise 13 we used list comprehension and we'll discuss this in detail later in this class.
+In the advanced exercise 5 we used list comprehension and we'll discuss this in detail later in this class.
 
-In exercise 14 ``my_sentence`` is a string object.  Strings, in Python, have a method available called ``split()`` that does exactly that.  It looks for a pattern within the string and splits the string into a list where each entry is a part of the string separated by the pattern.  If the argument to ``split()`` is left blank it will default to the ``space`` character.  We can define other characters to split against.
+In the advanced exercise 6 ``my_sentence`` is a string object.  Strings, in Python, have a method available called ``split()`` that does exactly that.  It looks for a pattern within the string and splits the string into a list where each entry is a part of the string separated by the pattern.  If the argument to ``split()`` is left blank it will default to the ``space`` character.  We can define other characters to split against.
 
     In[1]: my_str = '1,2,3'
     In[2]: my_str.split(',')
     Out[2]: ['1', '2', '3']
 
-In exercise 15 we saw the converse of ``split()`` - ``join()``.  This might seem misleading at first - you may think the list should have the ``join()`` method because you are joining each element in the list.  This is not the case - and it makes sense when you think about it.  The reason is because the result you are looking to get is a string.  An object method on a list shouldn't result in a string.  Why would an object's method change the object type?  That doesn't make sense.  Plus, with the ``join()`` method on strings you can do lots of useful joins that would otherwise not make sense if it were a method on a list.
+In advanced exercise 7 we saw the converse of ``split()`` - ``join()``.  This might seem misleading at first - you may think the list should have the ``join()`` method because you are joining each element in the list.  This is not the case - and it makes sense when you think about it.  The reason is because the result you are looking to get is a string.  An object method on a list shouldn't result in a string.  Why would an object's method change the object type?  That doesn't make sense.  Plus, with the ``join()`` method on strings you can do lots of useful joins that would otherwise not make sense if it were a method on a list.
 
     In[1]: my_list = ['a', 'n', 'd']
     In[2]: '-'.join(my_list)
@@ -153,7 +153,9 @@ Did that just blow your mind?  It should!
 Exercises
 -----------------
 
-1. Given the following dictionary, create a list that contains a tuple for each key:value pair.
+1. Repeat exercise 1 from class 1 using ``splice`` and ``step``.
+
+2. Given the following dictionary, create a list that contains a tuple for each key:value pair.
 
 Dictionary:
 
@@ -166,11 +168,11 @@ Dictionary:
 
     i.e. Your result should look like [('first_name', 'Rico'), ('last_name', 'Cordova'), ...]
 
-2. Let's do the reverse.  Given the above list create a dictionary from the information.
+3. Let's do the reverse.  Given the above list create a dictionary from the information.
 
-3. Using the person_info given above create a personal greeting string.
+4. Using the person_info given above create a personal greeting string.
 
-4. You are designing a game and have a list of players logged in to your system.  Given the list of names of each user in the system randomly choose 2 who will compete against each other in battle.  Be sure that the user won't be chosen to fight themselves.
+5. You are designing a game and have a list of players logged in to your system.  Given the list of names of each user in the system randomly choose 2 who will compete against each other in battle.  Be sure that the user won't be chosen to fight themselves.
 
 List of Names:
 
@@ -180,8 +182,8 @@ List of Names:
 Advanced Exercises
 -----------------
 
-5. Pit the two players against each other in simulated battle for 3 rounds.  Each player can deal damage from 1 to 100 each round (using a Gaussian distribution).  Whoever deals the most damage wins!
+1. Pit the two players against each other in simulated battle for 3 rounds.  Each player can deal damage from 1 to 100 each round (using a Gaussian distribution).  Whoever deals the most damage wins!
 
-6. Randomly choose 4 players and make 2 teams to do battle.  Same rules, each player can do 1 to 100 damage per round to the other team and the same player can't be on both teams.  Whichever team deals the most damage wins.
+2. Randomly choose 4 players and make 2 teams to do battle.  Same rules, each player can do 1 to 100 damage per round to the other team and the same player can't be on both teams.  Whichever team deals the most damage wins.
 
 
