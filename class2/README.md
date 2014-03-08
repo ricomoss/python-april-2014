@@ -4,7 +4,7 @@ April 7, 2014
 Scripts
 -----------------
 
-A script is a program written to automate the execution of tasks.  Python is popular as a scripting language.  The advantage of a scripting language is the speed at which development is possible.  Scripting languages uses interpreters to "compile" the code at run-time.
+A script is a program written to automate the execution of tasks.  Python is popular as a scripting language.  The advantage of a scripting language is the speed at which development is possible.  Scripting languages use interpreters to "compile" the code at run-time.
 
 Writing a script in Python is a simple task.  Simply create a file, place your code in the file and call the Python interpreter with the file as the argument.
 
@@ -35,7 +35,7 @@ If you set your script to be executable then you can rely on the environment to 
 
 The above command makes the script executable by every user.  Be careful modifying the permissions of files as you may accidentally grant more access than you intended.  For the purposes of these examples the file may be executable by all without any worries - we're not doing anything critical here.
 
-Now, within the script file simply put the ``shebang`` as the first line and you're on your way.  The ``shebang`` is label telling the environment (shell, OS, browser, etc) which interpreter should be used for the file.
+Now, within the script file simply put the ``shebang`` as the first line and you're on your way.  The ``shebang`` is a label telling the environment (shell, OS, browser, etc) which interpreter should be used for the file.
 
     #!/user/bin/env python
 
@@ -61,9 +61,10 @@ Review From Class1
 
 There were a few concepts introduced in the first class that we'll review shortly before we expand.  If you took the time to do the advanced exercises you may have run into some concepts we didn't discuss.  Let's do that now.
 
-9. We used a Python ``max()`` built-in function.  Python has dozens of built-in functions and you are encouraged to use them whenever you can.  Without going into too much detail let's just say the Python team has optimized these built-in functions to be very efficient (much more efficient than your code would be).  In the case of finding the max value with ``for`` or ``while`` loops you'll be magnitudes of order slower than using Python's ``max()`` built-in function.  You can find more information about Python's built-in functions on the official `Python website <http://docs.python.org/3.3/library/functions.html>`_
 
-10. We spliced the list using the following syntax.
+In exercise 9 we used the Python ``max()`` built-in function.  Python has dozens of built-in functions and you are encouraged to use them whenever you can.  Without going into too much detail let's just say the Python team has optimized these built-in functions to be very efficient (much more efficient than your code would be).  In the case of finding the max value with ``for`` or ``while`` loops you'll be magnitudes of order slower than using Python's ``max()`` built-in function.  You can find more information about Python's built-in functions on the official Python website (http://docs.python.org/3.3/library/functions.html).
+
+In exercise 10 we spliced the list using the following syntax.
 
     In[1]: my_obj[start:end]
 
@@ -73,32 +74,29 @@ Which is equivalent to the following (for lists).
     for index in range(start, end):
         new_obj.append(my_obj[index])
 
-11. To take the above concept even further we'll add to it ``step``.
+In exercise 11 we took the above concept even further and added ``step``.
 
     In[1]: name[::-1]
 
 If ``start`` and ``end`` are left blank it will start at the beginning and finish at the end.  The ``step`` is the final value which determines how we'll "step" through the list.  In this case, with ``-1``, we're stepping backward one at a time.
 
-13. This is called list comprehension and we'll discuss this in detail later in this class.
+In exercise 13 we used list comprehension and we'll discuss this in detail later in this class.
 
-14. ``my_sentence`` is a string object.  Strings, in Python, have a method available called ``split()`` that does exactly that.  I looks for a pattern within the string and splits the string into a list where each entry is the patterns separated by the split.  If the argument to ``split()`` is left blank it will default to the ``space`` character.  We can define other characters to split against.
+In exercise 14 ``my_sentence`` is a string object.  Strings, in Python, have a method available called ``split()`` that does exactly that.  It looks for a pattern within the string and splits the string into a list where each entry is a part of the string separated by the pattern.  If the argument to ``split()`` is left blank it will default to the ``space`` character.  We can define other characters to split against.
 
     In[1]: my_str = '1,2,3'
-
     In[2]: my_str.split(',')
     Out[2]: ['1', '2', '3']
 
-15. Conversly strings have a ``join()`` method.  This might seem misleading at first - you may think the list should have the ``join()`` method because you are joining each element in the list.  This is not the case - and it makes sense when you think about it.  The reason is because the result you are looking to get is a string.  An object method on a list shouldn't result in a string.  Why would an objects method change the object type?  That doesn't make sense.  Plus, with the ``join()`` method on strings you can do lots of useful joins that would otherwise not make sense if it were a method on a list.
+In exercise 15 we saw the converse of ``split()`` - ``join()``.  This might seem misleading at first - you may think the list should have the ``join()`` method because you are joining each element in the list.  This is not the case - and it makes sense when you think about it.  The reason is because the result you are looking to get is a string.  An object method on a list shouldn't result in a string.  Why would an object's method change the object type?  That doesn't make sense.  Plus, with the ``join()`` method on strings you can do lots of useful joins that would otherwise not make sense if it were a method on a list.
 
     In[1]: my_list = ['a', 'n', 'd']
-
     In[2]: '-'.join(my_list)
     Out[2]: 'a-n-d'
-
     In[3]: ' - 123'.join(my_list)
     Out[3]: 'a - 123n - 123d'
 
-To see more on what methods are available for Python strings see the official `docs <http://docs.python.org/3.3/library/string.html?highlight=string#module-string>`_.
+To see more on what methods are available for Python strings see the official docs (http://docs.python.org/3.3/library/string.html?highlight=string#module-string).
 
 List Comprehension
 -----------------
@@ -141,16 +139,28 @@ The key and value can be any Python object - this is where the true power lies.
     In[3]: my_dict['min_value']
     Out[3]: 1
 
+    In[4]: my_dict = {
+        'func1': max,
+        'func2': min
+    }
+    
+    In[5]: my_dict['func1'](my_list)
+    Out[5]: 5
+
+Did that just blow your mind?  It should!
+
 
 Exercises
 -----------------
 
 1. Given the following dictionary, create a list that contains a tuple for each key:value pair.
 
+Dictionary:
+
     person_info = {
         'first_name': 'Rico',
         'last_name': 'Cordova',
-        'email': 'rico.cordova@rocksolidbox.com',
+        'favorite_superhero_ability': 'Psionic Power',
         'favorite_language': 'Python'
     }
 
@@ -162,6 +172,8 @@ Exercises
 
 4. You are designing a game and have a list of players logged in to your system.  Given the list of names of each user in the system randomly choose 2 who will compete against each other in battle.  Be sure that the user won't be chosen to fight themselves.
 
+List of Names:
+
     ['rico', 'dal', 'corban', 'brandon', 'kris', 'rob', 'luke']
 
 
@@ -170,4 +182,6 @@ Advanced Exercises
 
 5. Pit the two players against each other in simulated battle for 3 rounds.  Each player can deal damage from 1 to 100 each round (using a Gaussian distribution).  Whoever deals the most damage wins!
 
-6. Randomly choose 4 players and make 2 teams to do battle.  Same rules, each player can do 1 to 100 damage per round to the other team.  Whichever team deals the most damage wins.
+6. Randomly choose 4 players and make 2 teams to do battle.  Same rules, each player can do 1 to 100 damage per round to the other team and the same player can't be on both teams.  Whichever team deals the most damage wins.
+
+
