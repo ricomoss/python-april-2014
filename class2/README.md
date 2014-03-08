@@ -107,7 +107,7 @@ Advanced Exercise 6
     Out[2]: ['1', '2', '3']
 
 
-Advanced Exercise 1
+Advanced Exercise 7
 -----------------
 
 We saw the converse of ``split()`` - ``join()``.  This might seem misleading at first - you may think the list should have the ``join()`` method because you are joining each element in the list.  This is not the case - and it makes sense when you think about it.  The reason is because the result you are looking to get is a string.  An object method on a list shouldn't result in a string.  Why would an object's method change the object type?  That doesn't make sense.  Plus, with the ``join()`` method on strings you can do lots of useful joins that would otherwise not make sense if it were a method on a list.
