@@ -66,36 +66,36 @@ my_list3 = my_list1 + my_list2
 
 # Advanced Exercise Solutions
 
-# 9.
+# 1.
 my_list = [1, 2, 3, 4]
 largest_val = max(my_list)
 
 
-# 10.
+# 2.
 my_str = 'ten_values'
 new_str = my_str[3:7]
 
 
-# 11.
+# 3.
 my_list = ['1', 'a', '2', 'b']
 new_list = my_list[::-1]
 
 
-# 12.
+# 4.
 name = 'rico'
 new_name = name[::-1]
 
 
-# 13.
+# 5.
 my_str = 'and'
 my_list = [char for char in my_str]
 
 
-# 14.
+# 6.
 my_sentence = 'I like Python.'
 my_list = my_sentence.split()
 
 
-# 15.
+# 7.
 my_list = ['a', 'n', 'd']
 my_str = ''.join(my_list)
