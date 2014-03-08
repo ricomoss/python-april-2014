@@ -60,7 +60,7 @@ Suppose I have a $1M and I want to give half of it away.  Then, I want to give h
 Exercise 1
 -----------------
 
-Given a dictionary of test scores, create a function that will return the person who had the highest score and their name.
+Given a dictionary of test scores, create a function that will print the name of the person who had the highest score and their score.
 
     {
         'james': 75,
@@ -74,12 +74,21 @@ Given a dictionary of test scores, create a function that will return the person
 Exercise 2
 -----------------
 
-Using the same dictionary of test scores, create a function that will return the average test score and a list of everyone who scored above average.
+Using the same dictionary of test scores, create a function that will print the average test score and everyone who scored above average.
 
 Exercise 3
 -----------------
 
 Create a function to return a list of the first ``n`` values of the Fibonacci sequence.
+
+i.e.
+    n = 1 => [0]
+    n = 2 => [0, 1]
+    n = 3 => [0, 1, 1]
+    n = 4 => [0, 1, 1, 2]
+    .
+    .
+    .
 
 Exercise 4
 -----------------
@@ -104,18 +113,18 @@ i.e.
 
     {
         'key1': {
-            'subkey1: [1, 2, 3],
-            'subkey2: 'foo',
-            'subkey3: 'bar',
+            'subkey1': [1, 2, 3],
+            'subkey2': 'foo',
+            'subkey3': 'bar',
         },
         'key2': {
-            'subkey1: {
+            'subkey1': {
                 'subsubkey1': 'foo',
-                'subsubkey2': 'bar,
+                'subsubkey2': 'bar',
             },
-            subkey2: [1, 2],
-            subkey3: (3, 4),
-            subkey4: 'foo',
+            'subkey2': [1, 2],
+            'subkey3': (3, 4),
+            'subkey4': 'foo',
         },
         .
         .
