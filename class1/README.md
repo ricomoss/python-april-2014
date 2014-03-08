@@ -135,43 +135,78 @@ The ``while`` loop is a combination of the ``if`` and the ``for``.  You provide 
     3
     4
 
-Exercises
+Exercise 1
 -----------------
 
-The following exercises can (and should) be done using only the basic flow statements discussed here.
+Print the first 5 odd numbers.
 
-1. Print the first 5 odd numbers.
-
-2. Create a list of the first 5 odd numbers.
-
-3. Given a string, determine if the string is your first name.
-
-4. Given a list of positive numbers, determine which number is the largest.
-
-5. Given a list of strings, create a new list that is in reverse order.
-
-6. Given a string, create a new string that is in reverse order.
-
-7. Given a string of length 10, create a new string that is the 3rd through 7th character.
-
-8. Given 2 lists create a third list that is the concatenation of the two.
-
-
-Advanced Exercises
+Exercise 2
 -----------------
 
-The following exercises use basic flow statements along with other Python libraries to solve more advanced problems.
+Create a list of the first 5 odd numbers.
 
-9. Using Python libraries, solve exercise 4.
+Exercise 3
+-----------------
 
-10. Using Python libraries, solve exercise 7.
+Given a string, determine if the string is your first name.
 
-11. Using Python libraries, solve exercise 5.
+Exercise 4
+-----------------
 
-12. Using Python libraries, solve exercise 6.
+Given a list of positive numbers, determine which number is the largest.
 
-13. Create a list from each letter of a string.  i.e. 'and' => ['a', 'n', 'd']
+Exercise 5
+-----------------
 
-14. Create a list from each word in a sentence. i.e. 'I like Python.' => ['I', 'like', 'Python.']
+Given a list of strings, create a new list that is in reverse order.
 
-15. Create a string from the contents of a list.  i.e. ['a', 'n', 'd'] => 'and'
+Exercise 6
+-----------------
+
+Given a string, create a new string that is in reverse order.
+
+Exercise 7
+-----------------
+
+Given a string of length 10, create a new string that is the 3rd through 7th character.
+
+Exercise 8
+-----------------
+
+Given 2 lists create a third list that is the concatenation of the two.
+
+
+Advanced Exercise 1
+-----------------
+
+Using Python libraries, solve exercise 4.
+
+Advanced Exercise 2
+-----------------
+
+Using Python libraries, solve exercise 7.
+
+Advanced Exercise 3
+-----------------
+
+Using Python libraries, solve exercise 5.
+
+Advanced Exercise 4
+-----------------
+
+Using Python libraries, solve exercise 6.
+
+Advanced Exercise 5
+-----------------
+
+Create a list from each letter of a string.  i.e. 'and' => ['a', 'n', 'd']
+
+Advanced Exercise 6
+-----------------
+
+Create a list from each word in a sentence. i.e. 'I like Python.' => ['I', 'like', 'Python.']
+
+Advanced Exercise 7
+-----------------
+
+Create a string from the contents of a list.  i.e. ['a', 'n', 'd'] => 'and'
