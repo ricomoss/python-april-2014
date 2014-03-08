@@ -47,7 +47,7 @@ Python and Recursion
 
 Recursion is the principle of repeating a process on itself repeatedly.  Python, by default, allows 1000 levels of recursion (this can be adjusted manually if needed).  Let's look at a recursive example.
 
-Suppose I have a $1M and I want to give half of it away.  Then, I want to give half of the remaining away.  Then, I want to give half of the remaning away...you get the idea.  Suppose I want to have enough to buy a Trax pass when I'm done.  How much would I give away each time?  This can be solved very easily with recursion.
+Suppose I have $1M and I want to give half of it away.  Then, I want to give half of the remaining away.  Then, I want to give half of the remaning away...you get the idea.  Suppose I want to have enough to buy a Trax pass when I'm done.  How much would I have left when I'm done?  This can be solved very easily with recursion.
 
     def take_half(amount):
         trax_ticket = 5
@@ -82,12 +82,19 @@ Exercise 3
 Create a function to return a list of the first ``n`` values of the Fibonacci sequence.
 
 i.e.
+    
     n = 1 => [0]
+    
     n = 2 => [0, 1]
+    
     n = 3 => [0, 1, 1]
+    
     n = 4 => [0, 1, 1, 2]
+    
     .
+    
     .
+    
     .
 
 Exercise 4
