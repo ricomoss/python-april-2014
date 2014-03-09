@@ -29,7 +29,7 @@ Second, is the new-style class available starting in Python 2.2 and are the de f
 
 Notice the ``(object)`` syntax.  This syntax is using a concept called inheritance.  The newly defined ``MyCar`` object is inheriting some functionality from the object ``object``.  Don't get confused about the naming here.  Everything in Python is an object but the keyword ``object`` object is a special kind of object.  Don't fret too much about this...just always inherit ``object`` when you are defining your class.
 
-In Python 3 old-style classes don't even exist.  So, you can define your class without inheriting anything it'll fundamentally have the functionality of a new-style object.
+In Python 3 old-style classes don't even exist.  So, you can define your class without inheriting anything and it'll fundamentally have the functionality of a new-style object.
 
     class MyCar:
         pass
@@ -67,7 +67,7 @@ Or
 Initialization
 -----------------
 
-During the instantiation of a class Python will use a ``magic method`` named ``__init__()``.  It is common practice to set initialization parameters within the ``__init__()`` method.  The ``object`` within Python contains a definition of ``__init__()`` but just uses ``pass``.  So, you are able to ``overwrite`` the ``__init__()`` by simply defining within your class.
+During the instantiation of a class Python will use a ``magic method`` named ``__init__()``.  It is common practice to set initialization parameters within the ``__init__()`` method.  The ``object`` within Python contains a definition of ``__init__()`` but just uses ``pass``.  So, you are able to ``overwrite`` the ``__init__()`` by simply defining it within your class.
 
     class MyCar(object):
         def __init__(self, year, make, model, owner):
@@ -84,20 +84,21 @@ Now, when you instantiate an object you can initialize it with information.  Usi
 self
 -----------------
 
-You'll notice the use of the syntax ``self``.  This represents the instance of the object.  It is similar to ``this`` in other languages.  Each method in a class have ``self`` as the first argument so Python knows what object the method is being executed against.  To assign an attribute ``attr`` to a class simply assign the vale to ``self.attr`` during instantiation.
+You'll notice the use of the syntax ``self``.  This represents the instance of the object.  It is similar to ``this`` in other languages.  Each method in a class have ``self`` as the first argument so Python knows what object the method is being executed against.  To assign an attribute ``attr`` to a class simply assign the value to ``self.attr`` during instantiation.
 
-The attributes associated with object can be accessed using ``.`` notation.
+The attributes associated with an object can be accessed using ``.`` notation.
 
     print(aston_martin.model)
     DB9
 
-Using ``self`` you now have access the attribute within the scope of the object.
+Using ``self`` you now have access to the attribute within the scope of the object.
 
     class MyCar(object):
-        def __init__(self, year, make, model):
+        def __init__(self, year, make, model, owner):
             self.year = year
             self.make = make
             self.model = model
+            self.owner = owner
 
         def change_owner(self, new_owner):
             self.owner = new_owner
@@ -155,7 +156,7 @@ Given a list of objects, create a function that will assign a new ``Human`` owne
 Advanced Exercise 1
 -----------------
 
-Create a class called ``Player`` with attributes health, level and name.  Set the health and level to initialize to 500 and 1, respectively.  Give the class a method called ``attack()`` that returns a random value between 10 and 50 multiplied by ``level``.
+Create a class called ``Player`` with attributes health, level and name.  Set the health and level to initialize to 500 and 1, respectively.  Give the class a method called ``attack()`` that returns a random (uniform distribution) value between 10 and 50 multiplied by ``level``.
 
 Create a class called ``Battle`` that instantiates with 2 player objects.  Create a ``do_battle()`` method that handles the players attacking each other using their ``attack()`` method.  Continue attacking until one of the players is dead.  Report information about the battle (who won, damage done, number of rounds, etc).
 
