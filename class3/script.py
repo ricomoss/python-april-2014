@@ -97,7 +97,10 @@ def pretty_print(obj, indents=0):
                 pretty_print(val, indents + 1)
             else:
                 print('{}{}: {}'.format(' ' * 4 * (indents + 1), key, val))
-        print('{}}},'.format(' ' * 4 * indents))
+        closing = '{}}},'
+        if indents == 0:
+            closing = '{}}}'
+        print(closing.format(' ' * 4 * indents))
 
 
 if __name__ == '__main__':
