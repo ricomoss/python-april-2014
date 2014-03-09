@@ -4,7 +4,7 @@ April 14, 2014
 Review From Class3
 -----------------
 
-During the last class we expanded on the concept of functions.  Functions allow modularization of code for repeated use without violating the DRY principle.
+During the last class we expanded on the concept of functions.  Functions allow modularization of code for repeated use without so as to not violate the DRY principle.
 
 Additionally we discussed recursion and how it's used in Python.  Using functions we were able to create a recursive algorithm for generating the Fibonacci sequence.  The advanced exercise also used recursion and created a "pretty_print" function for displaying Python objects to STDOUT.
 
