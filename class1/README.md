@@ -9,7 +9,7 @@ We'll introduce Python as a programming language and briefly discuss the history
 PEP8
 -----------------
 
-The Python community has established standards to be used as a guideline for the way your code should be written.  You can find more information in the official guides, `PEP-8 <http://www.python.org/dev/peps/pep-0008/>`_, and `Django's Coding Style <http://tinyurl.com/6753zmc>`_.
+The Python community has established standards to be used as a guideline for the way your code should be written.  You can find more information in the official guide, PEP8 (http://www.python.org/dev/peps/pep-0008/).
 
 It mostly boils down to the most ``Pythonic`` way to come to your solution.  That is, if it's easy to read and understand it's correct.  If not, you're probably doing it wrong.
 
