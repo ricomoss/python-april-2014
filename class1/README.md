@@ -48,7 +48,7 @@ Programming flow is the basic foundation for logic in programming.  These basic 
 Interpreter
 -----------------
 
-Python is an interpreted language and uses an interpreter to "compile" the code.  To begin, we'll use the interpreter on your computer to do basic flow logic.  These examples will use iPython (pip install ipython)::
+Python is an interpreted language and uses an interpreter to "compile" the code.  To begin, we'll use the interpreter on your computer to do basic flow logic.  These examples will use iPython (pip install ipython).
 
     $> ipython
     Python 3.3.2+
