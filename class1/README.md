@@ -70,7 +70,7 @@ An ``if`` statement is evaluated by the interpreter for it's ``truthiness``.  If
        ...:     print('hello world')
        ...:
 
-The ``else`` part of the statement will handle the ``false`` condition of the statement.d
+The ``else`` part of the statement will handle the ``false`` condition of the statement.
 
     In [1]: if False:
        ...:     print('hello world')
