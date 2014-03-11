@@ -4,7 +4,7 @@ April 16, 2014
 Review From Class4
 -----------------
 
-During the last class we introduced classes and the concept of Introspection.  Objects are the fundamental building blocks in Python and an object is an instantiated class.  Upon instantiation, Python calls the ``__init__()`` ``method``.  It is during instantiation you should initialize ``self``.
+During the last class we introduced classes and the concept of introspection.  Objects are the fundamental building blocks in Python and an object is an instantiated class.  Upon instantiation, Python calls the ``__init__()`` ``method``.  It is during instantiation you should initialize ``self``.
 
 Introspection provides you with the ability to observe the state of objects during run time.  This is powerful because you can decide how to execute the code depending on what kind of object you are dealing with.
 
@@ -119,13 +119,13 @@ We'll discuss exception handling in further detail later in the course.
 Modules
 -----------------
 
-Modules are a way of Python to organize files so that code within one file can be made accessible to another file.  This is very important because you don't want to build your entire project in a single file.  Just as you should always keep your code in small logical chunks so should you also keep your files as small logical chunks.  Put utility functions in a utils.py file, put models in a models.py file, etc.
+Modules are the way Python organizes files so that code within one file can be made accessible to another file.  This is very important because you don't want to build your entire project in a single file.  Just as you should always keep your code in small logical chunks so should you also keep your files as small logical chunks.  Put utility functions in a utils.py file, put models in a models.py file, etc.
 
 You must be sure to add your module to the system's ``PYTHONPATH``.  The ``PYTHONPATH`` is an environment variable that tells Python where to look when you declare files.  This can be to execute files or to import code from another file.
 
 You can imagine it might get tedious always trying to keep track of your ``PYTHONPATH``.  To fix that problem it's very useful to use virtual environments.  Virtual environments provide you the ability to install Python libraries, modify your interpreter, modify *any* environment variable...all without effecting your base system or any other virtual environment.
 
-For example, suppose you have a project you are building using Python 3 and another Python library, say, psycopg2.  The psycopg2 library allows for you to interface with a PostgreSQL database.  You'll need to do some basic setup of environment variables to get this all working correctly.
+For example, suppose you have a project you are building using Python 3 and another Python library, say psycopg2.  The psycopg2 library allows for you to interface with a PostgreSQL database.  You'll need to do some basic setup of environment variables to get this all working correctly.
 
 Suppose you have other projects that use Python 2 and MySQL.  If you start fiddling with the environment variables or installing other libraries you may effect your other projects.  If you ensure you always use virtual environments you won't have this problem.
 
@@ -138,7 +138,7 @@ Rewrite the ``Human`` class from class 4 exercise 1 to use ``kwargs`` with defau
 Exercise 2
 -----------------
 
-Create a new module called to_battle.  Create 3 files in the module - player.py, battle.py and utils.py.  Place the ``Player()`` class from class 5 exercise 1 in the player.py file, the ``Battle()`` class in the battle.py file and the ``pretty_print()`` function in the utils.py file.  Go through and use imports throughout.  Write a script to verify functionality.
+Create a new module called to_battle.  Create 3 files in the module - player.py, battle.py and utils.py.  Place the ``Player()`` class from class 5 Exercise 1 in the player.py file, the ``Battle()`` class from class 4 Advanced Exercise 1 in the battle.py file and the ``pretty_print()`` function from class 3 Advanced Exercise 1 in the utils.py file.  Go through and use imports throughout.  Write a script to verify functionality.
 
 Advanced Exercise 1
 -----------------
