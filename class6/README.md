@@ -12,11 +12,11 @@ We refactored some code to take advantage of Python ``modules``.  Organization o
 Raising Exceptions
 -----------------
 
-Using exceptions you can control the flow of information through your code.  By defining this flow you're creating an ``API``.  APIs are the backbone of making your code compatible with the outside world.  After all, how userful is your code if other developers can't interface to it?
+Using exceptions you can control the flow of information through your code.  By defining this flow you're creating an ``API``.  APIs are the backbone of making your code compatible with the outside world.  After all, how userful is your code if other developers can't interface with it?
 
 Python has several built in exceptions as well as the ability to create your own.  In general, you should try to use Python's exceptions rather than building your own.  The more standard your code is the more usable it is to others.
 
-The process of raising exceptions entails deciding what type of data you expect and telling Python how it should error if something bad happens.  You should try and control how your code ``raises`` rather than letting the interpreter error.
+The process of raising exceptions entails deciding what type of data you expect and telling Python how it should error if something bad happens.  You should try and control how your code ``raises`` rather than letting the a library raise the error.
 
     def add_nums(*args):
         tot = 0
@@ -73,7 +73,7 @@ Take note that above we said that the code would raise ``ZeroDivisionError``.  T
     def bar():
         try:
             foo()
-        except KeyError():
+        except KeyError:
             pass
 
 Exercise 1
