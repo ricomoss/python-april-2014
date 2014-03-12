@@ -48,7 +48,7 @@ Instantiation
 
 The power behind a class is the ability to instantiate it.  Instantiation is simply creating a copy that functions independently of any other instantiation.  To instantiate a class simply declare a new object set equal to the class call.
 
-    my_car = MyCar()
+    In[1]: my_car = MyCar()
 
 Now, you have a ``my_car`` object that is an instantiation of ``MyCar``.  It is a local copy, can be manipulated, used for calculations, etc and all other instantiations of ``MyCar`` will be unaffected by the activity against this instantiation.
 
@@ -56,13 +56,13 @@ Notice the naming convention used here.  Classes use ``UpperCamelCase`` and the 
 
 If you are doing multiple instantiations of a class each will need a unique name (otherwise you'll be overwriting).  In this case it's common practice to append an index at the end of the name or name them to represent their intended functionality.
 
-    my_car1 = MyCar()
-    my_car2 = MyCar()
+    In[1]: my_car1 = MyCar()
+    In[2]: my_car2 = MyCar()
 
 Or
 
-    aston_martin = MyCar()
-    maserati = MyCar()
+    In[1]: aston_martin = MyCar()
+    In[2]: maserati = MyCar()
 
 Initialization
 -----------------
@@ -78,8 +78,8 @@ During the instantiation of a class Python will use a ``magic method`` named ``_
 
 Now, when you instantiate an object you can initialize it with information.  Using the example above.
 
-    aston_martin = MyCar(2014, 'Aston Martin', 'DB9', 'James Bond')
-    maserati = MyCar(2014, 'Maserati', 'Granturismo', 'Christopher Moltisanti')
+    In[1]: aston_martin = MyCar(2014, 'Aston Martin', 'DB9', 'James Bond')
+    In[2]: maserati = MyCar(2014, 'Maserati', 'Granturismo', 'Christopher Moltisanti')
 
 self
 -----------------
@@ -88,8 +88,8 @@ You'll notice the use of the syntax ``self``.  This represents the instance of t
 
 The attributes associated with an object can be accessed using ``.`` notation.
 
-    print(aston_martin.model)
-    DB9
+    In[1]: print(aston_martin.model)
+    Out[1]: DB9
 
 Using ``self`` you now have access to the attribute within the scope of the object.
 
@@ -105,25 +105,28 @@ Using ``self`` you now have access to the attribute within the scope of the obje
 
 Using the above examples we can see how the instance changes as we execute methods against it.
 
-    print(aston_martin.owner)
-    James Bond
-    print(maserati.owner)
-    Chrisopher Moltisanti
+    In[1]: print(aston_martin.owner)
+    Out[1]: James Bond
 
-    aston_martin.change_owner('Rico Cordova')
-    print(aston_martin.owner)
-    Rico Cordova
+    In[2]: print(maserati.owner)
+    Out[2]: Chrisopher Moltisanti
+
+    In[3]: aston_martin.change_owner('Rico Cordova')
+
+    In[4]: print(aston_martin.owner)
+    Out[4]: Rico Cordova
 
 This is no different than any other object method we've been using throughout this course.  Consider formatted strings.
 
-    my_str = 'Hello, my name is {}.'
+    In[1]: my_str = 'Hello, my name is {}.'
 
-    print(my_str)
-    Hello, my name is {}.
+    In[2]: print(my_str)
+    Out[2]: Hello, my name is {}.
 
-    my_str = my_str.format('Rico')
-    print(my_str)
-    Hello, my name is Rico.
+    In[3]: my_str = my_str.format('Rico')
+
+    In[4]: print(my_str)
+    Out[4]: Hello, my name is Rico.
 
 
 Introspection
@@ -133,8 +136,8 @@ Using introspection we can inspect information about the structure of objects wi
 
 In the advanced exercise in class 3 we used ``isinstance`` to inspect the object being passed to the ``pretty_print`` function to determine, at run time, how to handle it.  The ``isinstance`` built-in function is an introspective tool.
 
-    isinstance(aston_martin, MyCar)
-    True
+    In[1]: isinstance(aston_martin, MyCar)
+    Out[1]: True
 
 Exercise 1
 -----------------

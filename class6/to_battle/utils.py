@@ -26,3 +26,10 @@ def pretty_print(obj, indents=0):
         if indents == 0:
             closing = '{}}}'
         print(closing.format(' ' * 4 * indents))
+
+
+def get_list_item_safely(obj, index):
+    try:
+        return obj[index]
+    except IndexError:
+        return None

@@ -86,14 +86,23 @@ def exercise4():
 # Advanced Exercise 1
 def pretty_print(obj, indents=0):
     if isinstance(obj, (list, tuple)):
+        opening = '{}['
+        closing = '{}]'
+        if isinstance(obj, tuple):
+            opening = '{}('
+            closing = '{})'
+        print(opening.format(' ' * 4 * indents))
+
         for item in obj:
-            return pretty_print(item)
+            pretty_print(item, 1)
+
+        print(closing.format(' ' * 4 * indents))
+
     elif isinstance(obj, dict):
-        if indents == 0:
-            print('{')
+        print('{}{{'.format(' ' * 4 * indents))
         for key, val in obj.items():
             if isinstance(val, dict):
-                print('{}{}: {{'.format(' ' * 4 * (indents + 1), key))
+                print('{}{}: {'.format(' ' * 4 * (indents + 1), key))
                 pretty_print(val, indents + 1)
             else:
                 print('{}{}: {}'.format(' ' * 4 * (indents + 1), key, val))

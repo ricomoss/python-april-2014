@@ -72,7 +72,7 @@ Advanced Exercise 2
 
 We spliced the list using the following syntax.
 
-    In[1]: my_obj[start:end]
+    my_obj[start:end]
 
 Which is equivalent to the following (for lists).
 
@@ -86,7 +86,7 @@ Advanced Exercise 3 and 4
 
 We took the above concept even further and added ``step``.
 
-    In[1]: name[::-1]
+    name[::-1]
 
 If ``start`` and ``end`` are left blank it will start at the beginning and finish at the end.  The ``step`` is the final value which determines how we'll "step" through the list.  In this case, with ``-1``, we're stepping backward one at a time.
 
@@ -103,6 +103,7 @@ Advanced Exercise 6
 ``my_sentence`` is a string object.  Strings, in Python, have a method available called ``split()`` that does exactly that.  It looks for a pattern within the string and splits the string into a list where each entry is a part of the string separated by the pattern.  If the argument to ``split()`` is left blank it will default to the ``space`` character.  We can define other characters to split against.
 
     In[1]: my_str = '1,2,3'
+
     In[2]: my_str.split(',')
     Out[2]: ['1', '2', '3']
 
@@ -113,8 +114,10 @@ Advanced Exercise 7
 We saw the converse of ``split()`` - ``join()``.  This might seem misleading at first - you may think the list should have the ``join()`` method because you are joining each element in the list.  This is not the case - and it makes sense when you think about it.  The reason is because the result you are looking to get is a string.  An object method on a list shouldn't result in a string.  Why would an object's method change the object type?  That doesn't make sense.  Plus, with the ``join()`` method on strings you can do lots of useful joins that would otherwise not make sense if it were a method on a list.
 
     In[1]: my_list = ['a', 'n', 'd']
+
     In[2]: '-'.join(my_list)
     Out[2]: 'a-n-d'
+
     In[3]: ' - 123'.join(my_list)
     Out[3]: 'a - 123n - 123d'
 
@@ -212,7 +215,7 @@ You are designing a game and have a list of players logged in to your system.  G
 
 List of Names:
 
-    ['rico', 'dal', 'corban', 'brandon', 'kris', 'rob', 'luke']
+    ('Brandon', 'Corban', 'Dal', 'Kris', 'Luke', 'Rico', 'Rob')
 
 
 Advanced Exercise 1

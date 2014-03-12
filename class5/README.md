@@ -10,10 +10,10 @@ Introspection provides you with the ability to observe the state of objects duri
 
 The advanced exercise required the use of Python ``modules`` in order to import the ``utils.py`` file.  To correctly import the file we needed to tell Python where it should look for the ``module``.  This was done by adding to the ``PYTHONPATH`` environment variable.
 
-``*args`` / ``**kwargs``
+args / kwargs
 -----------------
 
-Python allows you to define methods to accept ``*args`` and ``**kwargs`` parameters.  The ``*args`` are a ``list`` or ``tuple`` of ordered parameters.  You would use ``*args`` if you don't know how many parameters your function might take.
+Python allows you to define methods to accept ``args`` and ``kwargs`` parameters.  The ``args`` are a ``list`` or ``tuple`` of ordered parameters.  You would use ``args`` if you don't know how many parameters your function might take.
 
     def sum_nums(*args):
         total = 0
@@ -45,7 +45,7 @@ Or you call a function using the ``**`` notation with a ``dict``.
     key1: value1
     key2: value2
 
-You can use a combination of normal parameters, ``*args`` and ``**kwargs`` but be careful because order matters!  If you choose to use a combination you'll need to specify normal parameters first, ``*args`` next, explicit keyword arguments next and ``**kwargs`` last.
+You can use a combination of normal parameters, ``args`` and ``kwargs`` but be careful because order matters!  If you choose to use a combination you'll need to specify normal parameters first, ``args`` next, explicit keyword arguments next and ``kwargs`` last.
 
     def do_stuff(name, *args, your_name=None, **kwargs):
         print(name)
@@ -55,43 +55,35 @@ You can use a combination of normal parameters, ``*args`` and ``**kwargs`` but b
         for key, value in kwargs:
             print('{}: {}'.format(key, value))
 
-    do_stuff('rico')
+    In[1]: do_stuff('rico')
     rico
     your_name: None
 
-    do_stuff('rico', 1, 2)
-    rico
-    1
-    2
-    your_name: None
-
-    do_stuff('rico', *(1, 2))
+    In[2]: do_stuff('rico', 1, 2)
     rico
     1
     2
     your_name: None
 
-    do_stuff(*('rico', 1, 2))
+    In[3]: do_stuff('rico', *(1, 2))
     rico
     1
     2
     your_name: None
 
-    do_stuff(*('rico', 1, 2), your_name='bro')
+    In[4]: do_stuff(*('rico', 1, 2))
+    rico
+    1
+    2
+    your_name: None
+
+    In[5]: do_stuff(*('rico', 1, 2), your_name='bro')
     rico
     1
     2
     your_name: bro
 
-    do_stuff(*('rico', 1, 2), your_name='bro', key1='val1', key2='val2')
-    rico
-    1
-    2
-    your_name: bro
-    key1: val1
-    key2: val2
-
-    do_stuff(*('rico', 1, 2), your_name='bro', **{'key1': 'val1', 'key2': 'val2'})
+    In[6]: do_stuff(*('rico', 1, 2), your_name='bro', key1='val1', key2='val2')
     rico
     1
     2
@@ -99,11 +91,25 @@ You can use a combination of normal parameters, ``*args`` and ``**kwargs`` but b
     key1: val1
     key2: val2
 
-    do_stuff(*('rico', 1, 2), **{'your_name': 'bro', 'key1': 'val1', 'key2': 'val2'})
+    In[7]: do_stuff(*('rico', 1, 2), your_name='bro', **{'key1': 'val1', 'key2': 'val2'})
+    rico
+    1
+    2
+    your_name: bro
+    key1: val1
+    key2: val2
+
+    In[8]: do_stuff(*('rico', 1, 2), **{'your_name': 'bro', 'key1': 'val1', 'key2': 'val2'})
+    rico
+    1
+    2
+    your_name: bro
+    key1: val1
+    key2: val2
 
 Remember that order matters.  If you put ``kwargs`` before ``args`` there will be problems.
 
-    do_stuff('rico', your_name='bro', 1, 2)
+    In[1]: do_stuff('rico', your_name='bro', 1, 2)
     SyntaxError: non-keyword arg after keyword arg
 
 Using ``args`` and ``kwargs`` can let you do some powerful things.  You can use ``kwargs`` to provide default values.  In the example above the ``your_name`` parameter had a default value of ``None``.  Default parameters cause ``kwargs`` so be sure to supply default parameters after your normal list of ``args``.
