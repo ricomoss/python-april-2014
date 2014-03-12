@@ -33,10 +33,10 @@ class Hero(Player):
 
 class Villain(Player):
     def __init__(self, **kwargs):
-        if kwargs.get(name) != constants.THANOS:
+        if kwargs.get(name) != constants.VILLAIN_NAME:
             raise ValueError(
                 'The only villian currently available is {}'.format(
-                    constants.THANOS))
+                    constants.VILLAIN_NAME))
         super(Villain, self).__init__(**kwargs)
 
     def attack(self):
