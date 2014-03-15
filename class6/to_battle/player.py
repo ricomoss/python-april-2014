@@ -5,14 +5,12 @@ from to_battle import constants
 
 # Refactored for Exercise 1 and Advanced Exercise 1
 class Player(object):
-    def __init__(self, name=None, level=1, **kwargs):
-        self.name = name
-        if not isinstance(level, int):
+    def __init__(self, **kwargs):
+        if not isinstance(kwargs.get('level'), int):
             raise TypeError('The player level must be an integer.')
-        self.level = level
-        self.set_health()
-        for key, val in kwargs:
+        for key, val in kwargs.items():
             setattr(self, key, val)
+        self.set_health()
 
     def attack(self):
         return int(random.uniform(10, 50) * self.level)
@@ -26,16 +24,16 @@ class Player(object):
 
 class Hero(Player):
     def __init__(self, **kwargs):
-        if kwargs.get(name) not in constants.PLAYER_NAME_CHOICES:
+        if kwargs.get('name') not in constants.PLAYER_NAME_CHOICES:
             raise KeyError('The player must be one of the possible choices.')
         super(Hero, self).__init__(**kwargs)
 
 
 class Villain(Player):
     def __init__(self, **kwargs):
-        if kwargs.get(name) != constants.VILLAIN_NAME:
+        if kwargs.get('name') != constants.VILLAIN_NAME:
             raise ValueError(
-                'The only villian currently available is {}'.format(
+                'The only villain currently available is {}'.format(
                     constants.VILLAIN_NAME))
         super(Villain, self).__init__(**kwargs)
 

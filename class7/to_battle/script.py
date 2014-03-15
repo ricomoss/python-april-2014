@@ -10,7 +10,7 @@ from to_battle.battle import Battle
 
 
 if __name__ == '__main__':
-    player1 = Hero(name='Rico', level=10)
-    player2 = Villain(name='Thanos', level=1)
+    player1 = Hero(name='Rico')
+    player2 = Villain(name='Thanos')
     battle = Battle(player1, player2)
     battle.do_battle()
