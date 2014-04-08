@@ -28,6 +28,11 @@ import itertools
 # PEP 8 Standard:  Always separate each function or class at the file-level
 # with 2 spaces.
 def exercise1():
+    val = [num for num in range(1, 10, 2)]
+    print('{}'.format(val))
+
+
+def exercise2():
     person_info = {
         'first_name': 'Rico',
         'last_name': 'Cordova',
@@ -37,7 +42,7 @@ def exercise1():
     return [(key, val) for key, val in person_info.items()]
 
 
-def exercise2():
+def exercise3():
     my_list = [
         ('first_name', 'Rico'), ('last_name', 'Cordova'),
         ('email', 'rico.cordova@rocksolidbox.com'),
@@ -46,7 +51,7 @@ def exercise2():
     return dict(my_list)
 
 
-def exercise3():
+def exercise4():
     person_info = {
         'first_name': 'Rico',
         'last_name': 'Cordova',
@@ -57,8 +62,8 @@ def exercise3():
         person_info['first_name'], person_info['last_name'])
 
 
-def exercise4():
-    names = ['rico', 'dal', 'corban', 'brandon', 'kris', 'rob', 'luke']
+def exercise5():
+    names = ['rico', 'dal', 'brandon', 'kris', 'rob', 'luke']
     player1 = random.choice(names)
     player2 = player1
     while player2 == player1:
