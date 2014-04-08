@@ -215,7 +215,7 @@ You are designing a game and have a list of players logged in to your system.  G
 
 List of Names:
 
-    ('Brandon', 'Corban', 'Dal', 'Kris', 'Luke', 'Rico', 'Rob')
+    ('Brandon', 'Dal', 'Kris', 'Luke', 'Rico', 'Rob')
 
 
 Advanced Exercise 1
