@@ -45,7 +45,7 @@ To make use of a function you can simply call to the function with the required 
 Python and Recursion
 -----------------
 
-Recursion is the principle of repeating a process on itself repeatedly.  Python, by default, allows 1000 levels of recursion (this can be adjusted manually if needed).  Let's look at a recursive example.
+Recursion is the principle of repeating a process on itself.  Python, by default, allows 1000 levels of recursion (this can be adjusted manually if needed).  Let's look at a recursive example.
 
 Suppose I have $1M and I want to give half of it away.  Then, I want to give half of the remaining away.  Then, I want to give half of the remaning away...you get the idea.  Suppose I want to have enough to buy a Trax pass when I'm done.  How much would I have left when I'm done?  This can be solved very easily with recursion.
 
