@@ -32,7 +32,7 @@ Functions take parameters and those parameters are used within the function scop
     def foo(bar, baz):
         # Do something
 
-In the above example ``foo`` is the function, ``bar`` is the first required parameter and ``baz`` is the second required parameter.  The naming convention advocated by PEP8 has function, method and variable names be ``lower_undersore``.  So, we wouldn't name our funciton ``Foo``.
+In the above example ``foo`` is the function, ``bar`` is the first required parameter and ``baz`` is the second required parameter.  The naming convention advocated by PEP8 has function, method and variable names be ``lower_undersore``.  So, we wouldn't name our function ``Foo``.
 
 To make use of a function you can simply call to the function with the required parameters within the same namespace.
 
