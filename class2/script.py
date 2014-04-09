@@ -72,7 +72,7 @@ def exercise5():
 
 
 def adv_exercise1():
-    p1, p2 = exercise4()
+    p1, p2 = exercise5()
     num_of_rounds = 3
     dmg_summary = {
         'p1_dmg_done': 0,
@@ -95,7 +95,7 @@ def adv_exercise1():
 
 
 def adv_exercise2():
-    team1 = list(exercise4())
+    team1 = list(exercise5())
     p1, p2 = exercise4()
     while (p1 in team1) or (p2 in team1):
         p1, p2 = exercise4()
