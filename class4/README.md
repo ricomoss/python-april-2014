@@ -4,7 +4,7 @@ April 14, 2014
 Review From Class3
 -----------------
 
-During the last class we expanded on the concept of functions.  Functions allow modularization of code for repeated use without so as to not violate the DRY principle.
+During the last class we expanded on the concept of functions.  Functions allow modularization of code for repeated use so as to not violate the DRY principle.
 
 Additionally we discussed recursion and how it's used in Python.  Using functions we were able to create a recursive algorithm for generating the Fibonacci sequence.  The advanced exercise also used recursion and created a "pretty_print" function for displaying Python objects to STDOUT.
 
@@ -13,7 +13,7 @@ The advanced exercise used ``isinstance()``, which is a form of ``introspection`
 Classes
 -----------------
 
-The most fundamental concept in Python are classes.  Classes are what defines objects in Python - and everything in Python is an object.  Using classes we're able to define functionality that can all fit within a single namespace and be used in a modular fashion.  Functions are used within classes to help accomplish modularity.  When a function is within a class it is called a ``method``.  The term method isn't anything special - it's just a way of distinguishing that a function is property of a class rather than stand-alone.
+The most fundamental concept in Python are classes.  Classes are what defines objects in Python - and everything in Python is an object.  Using classes we're able to define functionality that can all fit within a single namespace and be used in a modular fashion.  Functions are used within classes to help accomplish modularity.  When a function is within a class it is called a ``method``.  The term method isn't anything special - it's just a way of distinguishing that a function is a property of a class rather than stand-alone.
 
 Classes are very powerful and provide the flexibility needed to build current enterprise level projects.  Designing code with classes is called Object Oriented Design (OOD).  Using classes in your programming is called Object Oriented Programming (OOP).
 
@@ -52,7 +52,7 @@ The power behind a class is the ability to instantiate it.  Instantiation is sim
 
 Now, you have a ``my_car`` object that is an instantiation of ``MyCar``.  It is a local copy, can be manipulated, used for calculations, etc and all other instantiations of ``MyCar`` will be unaffected by the activity against this instantiation.
 
-Notice the naming convention used here.  Classes use ``UpperCamelCase`` and the object instantiation uses the same name with ``lower_underscore``.  This the PEP8 standard.
+Notice the naming convention used here.  Classes use ``UpperCamelCase`` and the object instantiation uses the same name with ``lower_underscore``.  This is the PEP8 standard.
 
 If you are doing multiple instantiations of a class each will need a unique name (otherwise you'll be overwriting).  In this case it's common practice to append an index at the end of the name or name them to represent their intended functionality.
 
@@ -84,7 +84,7 @@ Now, when you instantiate an object you can initialize it with information.  Usi
 self
 -----------------
 
-You'll notice the use of the syntax ``self``.  This represents the instance of the object.  It is similar to ``this`` in other languages.  Each method in a class have ``self`` as the first argument so Python knows what object the method is being executed against.  To assign an attribute ``attr`` to a class simply assign the value to ``self.attr`` during instantiation.
+You'll notice the use of the syntax ``self``.  This represents the instance of the object.  It is similar to ``this`` in other languages.  Each method in a class has ``self`` as the first argument so Python knows what object the method is being executed against.  To assign an attribute ``attr`` to a class simply assign the value to ``self.attr`` during instantiation.
 
 The attributes associated with an object can be accessed using ``.`` notation.
 
