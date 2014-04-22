@@ -139,7 +139,7 @@ Suppose you have other projects that use Python 2 and MySQL.  If you start fiddl
 Exercise 1
 -----------------
 
-Rewrite the ``Human`` class from class 4 exercise 1 to use ``kwargs`` with default value for name of ``None`` and default value for level of ``1``.  Add a method that sets the ``health`` attribute to be 500 * level^2.
+Rewrite the ``Player`` class from class 4 advanced exercise 1 to use ``kwargs`` with default value for name of ``None`` and default value for level of ``1``.  Add a method that sets the ``health`` attribute to be 500 * level^2.
 
 Exercise 2
 -----------------
